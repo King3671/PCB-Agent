@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cj.imageagent.mapper.SpringAiChatMemoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.cj.imageagent.entity.SpringAiChatMemory">
+            <result property="conversationId" column="conversation_id" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="type" column="type" jdbcType="OTHER"/>
+            <result property="timestamp" column="timestamp" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        conversation_id,content,type,
+        timestamp
+    </sql>
+    <select id="getHistorySessionList" resultType="com.cj.imageagent.entity.SpringAiChatMemory">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM
+            spring_ai_chat_memory
+        WHERE
+            conversation_id = #{conversationId}
+        ORDER BY
+            timestamp ASC
+    </select>
+</mapper>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aeabcc6e-2e16-4f00-9872-566e86d70e7d" name="更改" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/ApifoxUploaderProjectSetting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/_2026_4_18_18_35____.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2026_4_18_18_35_取消提交了更改_[更改]/brown-papersq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2026_4_18_18_35_取消提交了更改_[更改]/esbuild.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2026_4_18_18_35_取消提交了更改_[更改]/pojoaque.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2026_4_18_18_35_取消提交了更改_[更改]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Views/ChatBox.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/api/chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/component/AiMarkdownViewer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/ImageAgentApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/config/ChatClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/config/MemoryConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/config/MyCustomJdbcChatMemory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/controller/AgentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/controller/tempController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/entity/ChatHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/entity/ChatMessageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/entity/SpringAiChatMemory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/mapper/ChatHistoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/mapper/SpringAiChatMemoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/models/Ollama.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/picture/output.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/picture/test1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/picture/test2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/prompt/SystemPrompt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/service/ChatHistoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/service/SpringAiChatMemoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/service/impl/ChatHistoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/service/impl/SpringAiChatMemoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/tools/WeatherForLocationTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1775908828190.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1775908865568.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1776343930309.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1776346371093.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1776497931381.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1776497983459.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1776498109330.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1776499745577.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cj/imageagent/uploadFile/Circuit_1776499911315.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ChatHistoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SpringAiChatMemoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cj/imageagent/ImageAgentApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cj/imageagent/models/OllamaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/ImageAgentApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/config/ChatClientConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/config/CorsConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/config/MemoryConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/config/MyCustomJdbcChatMemory$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/config/MyCustomJdbcChatMemory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/config/WebConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/controller/AgentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/controller/tempController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/entity/ChatHistory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/entity/ChatMessageDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/entity/SpringAiChatMemory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/mapper/ChatHistoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/mapper/SpringAiChatMemoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/models/Ollama.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/prompt/SystemPrompt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/service/ChatHistoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/service/SpringAiChatMemoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/service/impl/ChatHistoryServiceImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/service/impl/ChatHistoryServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/service/impl/SpringAiChatMemoryServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cj/imageagent/tools/WeatherForLocationTool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ChatHistoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/SpringAiChatMemoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/cj/imageagent/ImageAgentApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/cj/imageagent/models/OllamaTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/cj/imageagent/models/OllamaTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Vue Composition API Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/cj/imageagent/Controller/AgentController.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\mavenjar" />
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="userSettingsFile" value="D:\SoftWare3\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3BWLxy81PYegduLb7nhDHbY5fwS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "F:/IdeaProject/ImageAgent",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Subversion",
+    "ts.external.directory.path": "D:\\SoftWare3\\Idea\\IntelliJ IDEA 2023.2.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IdeaProject\ImageAgent\src\main\java\com\cj\imageagent\picture" />
+      <recent name="F:\IdeaProject\ImageAgent" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ImageAgentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ImageAgent" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cj.imageagent.ImageAgentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\王志诚\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="aeabcc6e-2e16-4f00-9872-566e86d70e7d" name="更改" comment="" />
+      <created>1695541708891</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695541708891</updated>
+      <workItem from="1774600131650" duration="2319000" />
+      <workItem from="1774603483082" duration="18000" />
+      <workItem from="1774603521536" duration="158000" />
+      <workItem from="1774603685049" duration="3033000" />
+      <workItem from="1774678747262" duration="4260000" />
+      <workItem from="1774683045988" duration="6461000" />
+      <workItem from="1774770597439" duration="6098000" />
+      <workItem from="1774943042725" duration="11475000" />
+      <workItem from="1775031439953" duration="6616000" />
+      <workItem from="1775205059340" duration="2368000" />
+      <workItem from="1775286403802" duration="11228000" />
+      <workItem from="1775470010002" duration="3804000" />
+      <workItem from="1775558344182" duration="2779000" />
+      <workItem from="1775642391076" duration="1151000" />
+      <workItem from="1775653563208" duration="8303000" />
+      <workItem from="1775663118637" duration="27000" />
+      <workItem from="1775696229250" duration="1782000" />
+      <workItem from="1775891329962" duration="14971000" />
+      <workItem from="1776343038882" duration="1954000" />
+      <workItem from="1776346320779" duration="323000" />
+      <workItem from="1776411090191" duration="4695000" />
+      <workItem from="1776496974671" duration="5902000" />
+      <workItem from="1776502999636" duration="1190000" />
+      <workItem from="1776504210463" duration="3730000" />
+      <workItem from="1776518516618" duration="63000" />
+      <workItem from="1776518583637" duration="57000" />
+      <workItem from="1776518662286" duration="858000" />
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1776503513523</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776503513523</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1776507320244</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776507320244</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1776507727762</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776507727762</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <option name="closed" value="true" />
+      <created>1776507738945</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776507738945</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
