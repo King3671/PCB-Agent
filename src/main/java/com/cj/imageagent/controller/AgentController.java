@@ -1,9 +1,12 @@
 package com.cj.imageagent.controller;
 
+import com.alibaba.cloud.ai.graph.agent.ReactAgent;
+import com.alibaba.cloud.ai.graph.exception.GraphRunnerException;
 import com.cj.imageagent.entity.ChatHistory;
 import com.cj.imageagent.entity.ChatMessageDTO;
 import com.cj.imageagent.entity.SpringAiChatMemory;
 import com.cj.imageagent.mapper.SpringAiChatMemoryMapper;
+import com.cj.imageagent.models.MyReactAgent;
 import com.cj.imageagent.models.Ollama;
 import com.cj.imageagent.service.ChatHistoryService;
 import com.cj.imageagent.service.SpringAiChatMemoryService;
@@ -24,7 +27,7 @@ import java.util.Map;
 @RequestMapping("/ai")
 public class AgentController {
 
-    private final Ollama ollama;
+    private  final MyReactAgent myReactAgent;
     private final ChatHistoryService service;
 
     // 只存 文件路径，不存字节！内存占用极小
@@ -40,17 +43,16 @@ public class AgentController {
             @RequestParam String question,
             @RequestParam String conversationId,
             @RequestParam(required = false) Boolean hasImage // 新增：前端告知是否有图片
-    ) {
+    ) throws GraphRunnerException {
         // 如果前端告知有图片，且缓存中存在路径
         if (Boolean.TRUE.equals(hasImage) && imagePathCache.containsKey("file")) {
             String imagePath = imagePathCache.get("file");
-
             // 注意：使用完后建议根据业务需求决定是否清除缓存，防止下一轮无图对话误触发
             // imagePathCache.remove("designImg");
-            return ollama.chatWithImagePath(question, imagePath, conversationId);
+            return myReactAgent.chatWithImagePath(question, imagePath, conversationId);
         } else {
             // 普通文本对话
-            return ollama.chat(question, conversationId);
+            return myReactAgent.chat(question, conversationId);
         }
     }
 

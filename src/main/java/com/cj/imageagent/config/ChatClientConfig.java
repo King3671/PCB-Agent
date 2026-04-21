@@ -1,7 +1,6 @@
 package com.cj.imageagent.config;
 
 import com.cj.imageagent.prompt.SystemPrompt;
-import com.cj.imageagent.tools.WeatherForLocationTool;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.ollama.OllamaChatModel;
@@ -13,8 +12,8 @@ public class ChatClientConfig {
     @Bean
     public ChatClient chatClient(
             OllamaChatModel model,
-            MyCustomJdbcChatMemory customMemory,
-            WeatherForLocationTool weatherTool
+            MyCustomJdbcChatMemory customMemory
+//            WeatherForLocationTool weatherTool
     ) {
         return ChatClient.builder(model)
                 .defaultSystem(SystemPrompt.SYSTEM_PROMPT)
@@ -22,7 +21,7 @@ public class ChatClientConfig {
                         MessageChatMemoryAdvisor.builder(customMemory)
                                 .build()
                 )
-                .defaultTools(weatherTool)
+//                .defaultTools(weatherTool)
                 .build();
     }
 }

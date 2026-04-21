@@ -39,3 +39,8 @@ mybatis-plus:
     db-config:
       # 由于主键是由 Spring AI 写入的 String 类型，这里建议设为 INPUT
       id-type: input
+## 开启日志级别
+#logging:
+#  level:
+#    org.springframework.ai: DEBUG
+#    com.alibaba.cloud.ai: DEBUG
