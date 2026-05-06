@@ -49,7 +49,7 @@ public class AgentController {
             String imagePath = imagePathCache.get("file");
             // 注意：使用完后建议根据业务需求决定是否清除缓存，防止下一轮无图对话误触发
             // imagePathCache.remove("designImg");
-            return myReactAgent.chatWithImagePath(question, imagePath, conversationId);
+            return myReactAgent.chatWithImagePath(question, List.of(imagePath), conversationId);
         } else {
             // 普通文本对话
             return myReactAgent.chat(question, conversationId);

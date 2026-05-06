@@ -3,37 +3,49 @@ package com.cj.imageagent.config;
 import com.alibaba.cloud.ai.graph.agent.ReactAgent;
 import com.alibaba.cloud.ai.graph.checkpoint.savers.mysql.MysqlSaver;
 import com.cj.imageagent.Interceptor.ToolErrorInterceptor;
-import com.cj.imageagent.models.MyReactAgent;
 import com.cj.imageagent.tools.DateTool;
+import com.cj.imageagent.tools.ImageGeneratorTool;
+import com.cj.imageagent.tools.RAGTool;
 import com.cj.imageagent.tools.SearchTool;
-import com.cj.imageagent.tools.WeatherTool;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.tool.ToolCallback;
-import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.method.MethodToolCallbackProvider;
-import org.springframework.context.ApplicationContext;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
-import java.lang.reflect.Method;
-import java.util.Arrays;
 import java.util.List;
+
+import static com.cj.imageagent.prompt.SystemPrompt.RECT_INSTRUCTION;
 import static com.cj.imageagent.prompt.SystemPrompt.RECT_SYSTEM_PROMPT;
 
 @Slf4j
-@RequiredArgsConstructor
 @Configuration
 public class AgentConfig {
 
     private final DataSource dataSource;
-
     private final DateTool dateTool;
     private final SearchTool searchTool;
-    private final WeatherTool weatherTool;
+    private final ImageGeneratorTool imageGeneratorTool;
+    private final RAGTool ragTool;
+
+    // 👇 关键！构造方法参数上加 @Qualifier！
+    public AgentConfig(
+            @Qualifier("mysqlDataSource") DataSource dataSource,
+            DateTool dateTool,
+            SearchTool searchTool,
+            ImageGeneratorTool imageGeneratorTool,
+            RAGTool ragTool
+    ) {
+        this.dataSource = dataSource;
+        this.dateTool = dateTool;
+        this.searchTool = searchTool;
+        this.imageGeneratorTool = imageGeneratorTool;
+        this.ragTool=ragTool;
+    }
 
 
     @Bean
@@ -43,7 +55,7 @@ public class AgentConfig {
     ) {
         // 手动传入工具类！，不要采用自动扫描包逻辑！
         MethodToolCallbackProvider toolCallbackProvider = MethodToolCallbackProvider.builder()
-                .toolObjects(dateTool, searchTool,weatherTool) // 手动写死
+                .toolObjects(dateTool, searchTool,imageGeneratorTool,ragTool) // 手动写死
                 .build();
         List<ToolCallback> allTools = List.of(toolCallbackProvider.getToolCallbacks());
 
@@ -62,7 +74,7 @@ public class AgentConfig {
                 .tools(allTools)
                 .hooks(chatHistorySaveHook)
                 .saver(mysqlSaver)
-//                .instruction(RECT_INSTRUCTION)
+                .instruction(RECT_INSTRUCTION)
                 .interceptors(new ToolErrorInterceptor())
                 .build();
     }

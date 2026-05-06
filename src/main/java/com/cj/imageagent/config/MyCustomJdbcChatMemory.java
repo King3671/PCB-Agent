@@ -9,6 +9,7 @@ import org.springframework.ai.chat.messages.AssistantMessage;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.content.Media;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.MimeTypeUtils;
@@ -21,9 +22,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-@Slf4j
 @RequiredArgsConstructor
+@Slf4j
 public class MyCustomJdbcChatMemory implements ChatMemory {
+
     private final JdbcTemplate jdbcTemplate;
     private final ObjectMapper objectMapper = new ObjectMapper();
 

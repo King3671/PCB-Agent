@@ -254,7 +254,6 @@ const scrollToBottom = () => {
 .assistant .message-bubble { background: #f3f4f6; border-radius: 4px 16px 16px 16px; color: #1f2937; }
 .user .message-bubble { background: #3b82f6; color: white; border-radius: 16px 4px 16px 16px; order: 1; }
 .chat-img-content { max-width: 300px; border-radius: 8px; margin-bottom: 8px; display: block; border: 1px solid #eee; }
-
 .input-section { padding: 10px 20px 40px; }
 .input-area-wrapper { max-width: 800px; margin: 0 auto; }
 

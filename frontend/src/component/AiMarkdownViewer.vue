@@ -37,8 +37,11 @@ const md = new MarkdownIt({
 
 // 计算属性：每次 content 变化（流式更新），自动重新渲染
 const renderedContent = computed(() => {
-  return md.render(props.content)
+  let html = md.render(props.content)
+  html = html.replace(/<img /g, '<img style="max-width:60%; border-radius:8px;" ')
+  return html
 })
+
 
 // 每次渲染完，自动高亮代码（流式也能正常高亮）
 watch(renderedContent, () => {

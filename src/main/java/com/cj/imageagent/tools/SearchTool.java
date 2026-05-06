@@ -16,7 +16,6 @@ public class SearchTool {
     @Tool( description = "网页搜索工具，当需要搜索信息时使用，参数：查询内容")
     public String getSearch(@ToolParam(description = "需要搜索的内容") String query) {
         // 假设这里调用了一个搜索API，并返回了结果
-
         return query;
     }
 }

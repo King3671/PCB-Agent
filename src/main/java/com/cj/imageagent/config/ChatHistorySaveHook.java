@@ -13,13 +13,19 @@ import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.messages.ToolResponseMessage;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.content.Media;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.util.MimeTypeUtils;
 
+import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -30,6 +36,7 @@ public class ChatHistorySaveHook extends ModelHook{
     private final JdbcTemplate jdbcTemplate;
     private final MediaUtils mediaUtils;
     private final ObjectMapper objectMapper;
+
     @Override
     public String getName() {
         return "my_memory_hook";
@@ -115,6 +122,7 @@ public class ChatHistorySaveHook extends ModelHook{
             if(lastMessage instanceof AssistantMessage assistantMessage){
                 // 有toolCalls = AI下发工具调用指令，内容是空，直接不保存！
                 if(assistantMessage.getToolCalls() != null && !assistantMessage.getToolCalls().isEmpty()){
+                    log.info("AI 调用工具：{}",assistantMessage.getToolCalls().get(0).name());
                     log.info("跳过工具调用Assistant消息，不入库");
                     return;
                 }
@@ -123,7 +131,7 @@ public class ChatHistorySaveHook extends ModelHook{
                 // 获取系统类型
 //                String type= String.valueOf(assistantMessage.getMessageType());
                 String type="assistant";
-                // 获取系统回复的图片信息
+
                 List<Media> mediaList  = assistantMessage.getMedia();
                 List<String> base64Lists = mediaList.stream()
                         .map(media -> mediaUtils.convertMediaToBase64(media))
@@ -143,5 +151,35 @@ public class ChatHistorySaveHook extends ModelHook{
         }catch (Exception e){
             log.error("存储历史消息失败: {}", e.getMessage());
         }
+    }
+    private AssistantMessage preProcessAssistantMessage(AssistantMessage msg){
+        String originalText = msg.getText();
+        // 获取text中的urls
+        Pattern urlPattern = Pattern.compile("https?://[^\\s)]+?\\.(png|jpg|jpeg|webp)(\\?[^\\s)]+)?", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = urlPattern.matcher(originalText);
+        List<String> imageUrls  = new ArrayList<>();
+        while (matcher.find()) {
+            String url = matcher.group();
+            imageUrls.add(url);
+        }
+        // ==============================
+        // 2. 把URL转成Media
+        // ==============================
+        List<Media> oldMedia = msg.getMedia();
+        List<Media> mediaList = new ArrayList<>();
+        if (oldMedia != null && !oldMedia.isEmpty()) {
+            mediaList.addAll(oldMedia);
+        }
+        for (String url : imageUrls) {
+            mediaList.add(new Media(MimeTypeUtils.IMAGE_PNG, URI.create(url)));
+        }
+
+        // ==============================
+        // 3. 复制并生成新的AssistantMessage
+        // ==============================
+        return AssistantMessage.builder()
+                .content(msg.getText())
+                .media(mediaList)
+                .build();
     }
 }

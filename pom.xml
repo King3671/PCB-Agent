@@ -57,16 +57,39 @@
             <artifactId>spring-ai-alibaba-agent-framework</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud.ai</groupId>-->
-<!--            <artifactId>spring-ai-alibaba-starter-dashscope</artifactId>-->
-<!--            <version>1.1.2.1</version>-->
-<!--        </dependency>-->
+        <!-- 阿里百炼dashscope -->
+        <dependency>
+            <groupId>com.alibaba.cloud.ai</groupId>
+            <artifactId>spring-ai-alibaba-starter-dashscope</artifactId>
+        </dependency>
 
         <!-- Spring AI Ollama -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-ollama</artifactId>
+        </dependency>
+
+        <!-- Pgvector 向量存储 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-pgvector-store</artifactId>
+        </dependency>
+
+        <!-- Pgvector 自动配置 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-autoconfigure-vector-store-pgvector</artifactId>
+        </dependency>
+
+        <!-- PDF 文档读取器 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-pdf-document-reader</artifactId>
+        </dependency>
+        <!-- Spring AI 文档处理 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-tika-document-reader</artifactId>
         </dependency>
 
         <!-- 模型记忆存储JDBC依赖-->
